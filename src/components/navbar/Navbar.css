@@ -14,7 +14,24 @@
 
 .nav-link a,
 .nav-profile a {
-  padding-right: 20px;
+  padding: 16px;
   text-decoration: none;
-  color: #f4eee8;
+  color: #fcf8f4;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+.nav-profile input {
+  padding: 6px;
+  border-radius: 3px;
+  border: none;
+}
+
+.profile-icon {
+  display: inline-block;
+  margin-left: 16px;
+  font-size: 24px;
 }

@@ -1,5 +1,14 @@
 .main-container {
   height: 90vh;
-  width: 90%;
+  border: 2px solid red;
+}
+
+.main-content {
+  height: 100%;
+  max-width: 90%;
   margin: auto;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

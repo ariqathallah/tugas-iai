@@ -13,8 +13,10 @@ const Navbar = () => {
         </div>
 
         <div className='nav-profile'>
-          <a href='#'>Search</a>
-          <a href='#'>Image Profile</a>
+          <input type='search' name='' id='' placeholder='search' />
+          <div className='profile-icon'>
+            <i class='far fa-user'></i>
+          </div>
         </div>
       </div>
     </nav>
