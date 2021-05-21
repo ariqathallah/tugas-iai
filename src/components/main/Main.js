@@ -1,13 +1,16 @@
 import React from 'react';
+import Navbar from '../navbar/Navbar';
+
 import './Main.css';
 
 const Main = () => {
   return (
-    <div className='main-container'>
-      <div className='main-content'>
+    <>
+      <Navbar />
+      <div className='main'>
         <h1>waiting for API</h1>
       </div>
-    </div>
+    </>
   );
 };
 

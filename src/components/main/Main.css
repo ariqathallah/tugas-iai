@@ -1,13 +1,8 @@
-.main-container {
-  height: 90vh;
-  border: 2px solid red;
-}
-
-.main-content {
-  height: 100%;
+.main {
+  height: 100%; /* disesuaikan dengan konten */
   max-width: 90%;
   margin: auto;
-  border: 2px solid blue;
+  border: 1px solid blue;
   display: flex;
   justify-content: center;
   align-items: center;
