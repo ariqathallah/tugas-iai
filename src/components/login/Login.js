@@ -3,28 +3,43 @@ import './Login.css';
 
 const Login = () => {
   return (
-    <div className='login-page'>
-      <div className='login-box'>
-        <h1>Login Dashboard</h1>
+    <div className='center'>
+      <div className='login-container'>
+        <h1>Welcome!</h1>
+        <form method='post'>
+          <div className='text-field'>
+            <input type='email' required name='email' id='' />
+            <span></span>
+            <label htmlFor='email'>Email</label>
+          </div>
 
-        <form action=''>
-          <label htmlFor='email'>Email</label>
-          <input type='email' name='email' id='' placeholder='Masukkan Email' />
-          <label htmlFor='password'>Password</label>
-          <input
-            type='password'
-            name='password'
-            id=''
-            placeholder='Masukkan Kata Sandi'
-          />
+          <div className='text-field'>
+            <input type='password' required name='password' id='' />
+            <span></span>
+            <label htmlFor='password'>Password</label>
+          </div>
+
+          <div className='forgot-pass'>
+            <Link to='#'>Forgot Password?</Link>
+          </div>
+          <Link to='/dashboard'>
+            <button className='login-btn' type='submit'>
+              Login
+            </button>
+          </Link>
+          <div className='signup-link'>
+            New to AdWeb? <Link to='#'>Create Account</Link>
+          </div>
         </form>
-
-        <Link to='/dashboard'>
-          <button>Masuk</button>
-        </Link>
       </div>
     </div>
   );
 };
 
 export default Login;
+
+{
+  /* <Link to='/dashboard'>
+          <button>Masuk</button>
+        </Link> */
+}
