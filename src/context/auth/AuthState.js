@@ -22,24 +22,28 @@ const AuthState = props => {
     if (localStorage.token) {
       setAuthToken(localStorage.token);
       state.token = localStorage.token;
+      dispatch({ type: "USER_LOADED", payload: "data user" });
+    }else{
+        dispatch({ type: "AUTH_ERROR" });
     }
 
-    const config = {
-      headers: {
-        "adweb-token": `${state.token}`
-      }
-    };
+    // const config = {
+    //   headers: {
+    //     "adweb-token": `${state.token}`
+    //   }
+    // };
 
-    try {
-      const res = await axios.get(
-        'https://adweb-api.herokuapp.com/profile',
-        config
-      );
+    // try {
+    //   const res = await axios.get(
+    //     'https://adweb-api.herokuapp.com/profile',
+    //     config
+    //   );
 
-      dispatch({ type: "USER_LOADED", payload: res.data });
-    } catch (err) {
-      dispatch({ type: "AUTH_ERROR" });
-    }
+    //   dispatch({ type: "USER_LOADED", payload: res.data });
+    // } catch (err) {
+    //   dispatch({ type: "AUTH_ERROR" });
+    // }
+    
   };
 
   // Registering user
@@ -75,7 +79,7 @@ const AuthState = props => {
         loginData
       );
 
-      console.log(res.data)
+      //console.log(res.data)
       
       if (!isFromRegister) {
         const bodyNotification = 'Berhasil masuk dengan akun ' + loginData.username + '. Anda akan dialihkan ke dashboard admin beberapa saat lagi . . .'
@@ -87,13 +91,13 @@ const AuthState = props => {
       
       setTimeout(function() {
         dispatch({ type: "SET_TOKEN", payload: res.data });
-        window.location.href = '/';
+        //window.location.href = '/';
         loadUser();
       }, 2000);
       
     } catch (err) {
       swal('', 'Terjadi kegagalan saat masuk. Pastikan akun yang dimasukkan sudah benar', 'error', {
-        buttons: ["OK", "Cancel"]
+        buttons: ["OK","Cancel"]
       });
 
       console.log(err);
