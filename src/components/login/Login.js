@@ -8,11 +8,10 @@ const Login = () => {
         <h1>Welcome!</h1>
         <form method='post'>
           <div className='text-field'>
-            <input type='email' required name='email' id='' />
+            <input type='text' required name='username' id='' />
             <span></span>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='username'>Username</label>
           </div>
-
           <div className='text-field'>
             <input type='password' required name='password' id='' />
             <span></span>
@@ -22,6 +21,7 @@ const Login = () => {
           <div className='forgot-pass'>
             <Link to='#'>Forgot Password?</Link>
           </div>
+
           <Link to='/dashboard'>
             <button className='login-btn' type='submit'>
               Login
@@ -37,9 +37,3 @@ const Login = () => {
 };
 
 export default Login;
-
-{
-  /* <Link to='/dashboard'>
-          <button>Masuk</button>
-        </Link> */
-}
