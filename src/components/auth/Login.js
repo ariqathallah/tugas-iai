@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
-import './Login.css';
 
 const Login = () => {
   return (
-    <div className='center'>
+    <div className='center_login'>
       <div className='login-container'>
         <h1>Welcome!</h1>
         <form method='post'>
-          <div className='text-field'>
+          <div className='text-field_login'>
             <input type='email' required name='email' id='' />
             <span></span>
             <label htmlFor='email'>Email</label>
           </div>
 
-          <div className='text-field'>
+          <div className='text-field_login'>
             <input type='password' required name='password' id='' />
             <span></span>
             <label htmlFor='password'>Password</label>
