@@ -39,3 +39,20 @@
 .profile-icon i {
   color: #fcf8f4;
 }
+
+/* Logout Button */
+
+.logout-btn {
+  border: none;
+  border-radius: 3px;
+  margin-left: 16px;
+  padding: 4px 10px;
+  text-align: center;
+  cursor: pointer;
+  background: #fcf8f4;
+  color: #325288;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 0 5px rgba(35, 173, 278, 1);
+}

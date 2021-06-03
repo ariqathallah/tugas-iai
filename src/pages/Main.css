@@ -1,9 +1,11 @@
 .main {
-  height: 100%; /* disesuaikan dengan konten */
+  min-height: 90vh;
   max-width: 90%;
   margin: auto;
   border: 1px solid blue;
-  display: flex;
+  padding: 0 16px;
+  /* display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
