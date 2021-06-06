@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import VerticalBar from '../charts/VerticalBar';
+import UploadAd from '../UploadAd';
 
 const IklanAll = () => {
   const [iklans, setIklans] = useState([]);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const fetchIklanAll = async () => {
     try {
       const response = await axios.get(
-        'https://adwebservice.herokuapp.com/get-all-ad',
+        'https://adweb-api.herokuapp.com/get-all-ad',
         {
           headers: {
             'adweb-token': localStorage.getItem('token'),
@@ -16,7 +19,8 @@ const IklanAll = () => {
       );
       const data = response.data.data;
       setIklans(data);
-      console.log(data);
+      setIsSuccess(true);
+      // console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -28,14 +32,15 @@ const IklanAll = () => {
 
   return (
     <div>
-      {iklans.map((iklan) => (
-        <div key={iklan._id}>
-          <h3>Id: {iklan.id_iklan}</h3>
-          <h5>category: {iklan.category}</h5>
-          <p>Views: {iklan.views}</p>
-          <p>Desc: {iklan.description}</p>
-        </div>
-      ))}
+      {isSuccess && <VerticalBar iklans={iklans} />}
+      <div
+        style={{
+          textAlign: 'center',
+          paddingTop: '30px',
+        }}
+      >
+        {isSuccess && <UploadAd iklans={iklans} />}
+      </div>
     </div>
   );
 };

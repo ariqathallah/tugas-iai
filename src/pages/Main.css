@@ -1,11 +1,4 @@
 .main {
-  min-height: 90vh;
   max-width: 90%;
   margin: auto;
-  border: 1px solid blue;
-  padding: 0 16px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }

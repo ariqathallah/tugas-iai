@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className='nav-container'>
       <div className='nav-components'>
         <div className='nav-link'>
-          <Link to='/dashboard'>Dashboard</Link>
+          <Link to='#'>Dashboard</Link>
           <Link to='#'>Inventory</Link>
           <Link to='#'>Report</Link>
           <Link to='#'>Settings</Link>

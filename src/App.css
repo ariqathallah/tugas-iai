@@ -56,7 +56,7 @@ body {
 /* Utilities */
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   overflow: hidden;
 }
@@ -64,7 +64,7 @@ body {
 /* Main Container */
 #main-container,
 #main-container > div {
-  height: 100vh;
+  min-height: 100vh;
   background: white;
 }
 
