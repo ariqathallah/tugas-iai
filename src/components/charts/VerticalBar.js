@@ -12,7 +12,7 @@ const VerticalBar = ({ iklans }) => {
     labels: id,
     datasets: [
       {
-        label: 'Ads Viewed on Twitter',
+        label: 'Number of Ads Viewed',
         data: view,
         backgroundColor: 'rgba(54, 162, 235, 0.2)',
         borderColor: 'rgba(54, 162, 235, 1)',
