@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import VerticalBar from '../charts/VerticalBar';
-import UploadAd from '../UploadAd';
+import UploadAd from '../upload/UploadAd';
 
 const IklanAll = () => {
   const [iklans, setIklans] = useState([]);
@@ -36,7 +36,7 @@ const IklanAll = () => {
       <div
         style={{
           textAlign: 'center',
-          paddingTop: '30px',
+          marginTop: '30px',
         }}
       >
         {isSuccess && <UploadAd iklans={iklans} />}

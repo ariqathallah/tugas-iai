@@ -4,6 +4,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import { useState } from 'react';
 import axios from 'axios';
+import './UploadAd.css';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -80,33 +81,37 @@ const UploadAd = () => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <form onSubmit={handleSubmit}>
-              <label htmlFor=''>Url: </label>
-              <input
-                type='text'
-                required
-                onChange={(e) => setUrl(e.target.value)}
-              />
-              <br />
+            <div className='upload-container'>
+              <form onSubmit={handleSubmit} className='upload-form'>
+                <div>
+                  <label htmlFor=''>Url: </label>
+                  <input
+                    type='text'
+                    required
+                    onChange={(e) => setUrl(e.target.value)}
+                  />
+                </div>
 
-              <label htmlFor=''>Description: </label>
-              <input
-                type='text'
-                required
-                onChange={(e) => setDesc(e.target.value)}
-              />
-              <br />
+                <div>
+                  <label htmlFor=''>Description: </label>
+                  <textarea
+                    type='text'
+                    required
+                    onChange={(e) => setDesc(e.target.value)}
+                  />
+                </div>
+                <div>
+                  <label htmlFor=''>Expire: </label>
+                  <input
+                    type='text'
+                    required
+                    onChange={(e) => setExp(e.target.value)}
+                  />
+                </div>
 
-              <label htmlFor=''>Expire: </label>
-              <input
-                type='text'
-                required
-                onChange={(e) => setExp(e.target.value)}
-              />
-              <br />
-
-              <button type='submit'>Submit</button>
-            </form>
+                <button type='submit'>Submit</button>
+              </form>
+            </div>
           </div>
         </Fade>
       </Modal>
