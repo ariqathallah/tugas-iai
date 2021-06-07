@@ -33,6 +33,7 @@
 .upload-form div textarea {
   width: 100%;
   padding: 8px;
+  resize: none;
 }
 
 .upload-form button {
