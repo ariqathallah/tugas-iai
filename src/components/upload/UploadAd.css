@@ -27,15 +27,36 @@
 
 .upload-form div input {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
 }
 
 .upload-form div textarea {
   width: 100%;
+  padding: 8px;
 }
 
 .upload-form button {
   width: 100%;
   margin-top: 10px;
-  padding: 5px;
+  padding: 6px;
+  background: #325288;
+  border: none;
+  color: #fcf8f4;
+  border-radius: 3px;
+}
+
+.upload-form button:hover {
+  box-shadow: 0 0 5px rgba(35, 173, 278, 1);
+}
+
+.publish-button {
+  padding: 6px;
+  background: #325288;
+  border: none;
+  color: #fcf8f4;
+  border-radius: 3px;
+}
+
+.publish-button:hover {
+  box-shadow: 0 0 5px rgba(35, 173, 278, 1);
 }

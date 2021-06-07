@@ -64,7 +64,7 @@ const UploadAd = () => {
 
   return (
     <div>
-      <button type='button' onClick={handleOpen}>
+      <button type='button' onClick={handleOpen} className='publish-button'>
         Publish New Ads
       </button>
       <Modal
