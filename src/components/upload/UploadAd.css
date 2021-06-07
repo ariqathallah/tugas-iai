@@ -47,6 +47,7 @@
 
 .upload-form button:hover {
   box-shadow: 0 0 5px rgba(35, 173, 278, 1);
+  cursor: pointer;
 }
 
 .publish-button {
@@ -59,4 +60,5 @@
 
 .publish-button:hover {
   box-shadow: 0 0 5px rgba(35, 173, 278, 1);
+  cursor: pointer;
 }
