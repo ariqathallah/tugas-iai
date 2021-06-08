@@ -30,3 +30,6 @@ yarn-error.log*
 
 # yarn
 .yarnrc.yml
+
+# netlify
+.netlify
